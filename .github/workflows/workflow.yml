@@ -1,0 +1,12 @@
+name: CI workflow #name of workflow
+
+on: #trigger
+  push: #type of trigger
+    branches: ["main"]
+  pull_request: #type of trigger
+    branches: ["main"] 
+
+jobs:
+  build: #name of the job
+    runs-on: ubuntu-latest #type of runner
+    container: python:3.9-slim #dependencies and OS should be consistent in CI pipeline
